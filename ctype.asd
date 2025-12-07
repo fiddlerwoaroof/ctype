@@ -17,8 +17,9 @@
                  (:file "cmucl" :if-feature :cmucl)
                  (:file "sicl"  :if-feature :sicl)
                  (:file "ecl"   :if-feature :ecl)
+                 (:file "lw"   :if-feature :lispworks)
                  (:file "unsupported"
-                  :if-feature (:not (:or :abcl :clasp :sbcl :ccl :cmucl :sicl :ecl)))
+                  :if-feature (:not (:or :lispworks :abcl :clasp :sbcl :ccl :cmucl :sicl :ecl)))
                  (:file "common-post")))
    (:file "classes" :depends-on ("packages"))
    (:file "create" :depends-on ("classes" "packages"))
