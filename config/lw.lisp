@@ -25,7 +25,8 @@
 
 (declaim (inline typexpand))
 (defun typexpand (type-specifier environment)
-  ;; not sure where the two-arg version is
+  (declare (ignore environment))
+  ;; The two-argument version is for compatibility; environment is ignored.
   (type:expand-user-type type-specifier #+(or) environment))
 
 (defmacro complex-ucptp (objectf ucpt)
